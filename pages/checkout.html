@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Agarmay fer</title>    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../js/nav.js" defer></script>
     <script src="../js/translations.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/universal-cart.js" defer></script>
@@ -530,22 +532,21 @@
             <div class="logo">
                 <h1><span class="logo-text">Agarmay </span><span class="logo-highlight">fer</span></h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html" data-translate="home">Home</a></li>
-                <li><a href="products.html" data-translate="products">Products</a></li>
-                <li><a href="categories.html" data-translate="categories">Categories</a></li>
-                <li><a href="about.html" data-translate="about">About</a></li>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" data-translate="home">Accueil</a></li>
+                <li><a href="products.html" data-translate="products">Produits</a></li>
+                <li><a href="categories.html" data-translate="categories">Catégories</a></li>
+                <li><a href="about.html" data-translate="about">À propos</a></li>
                 <li><a href="contact.html" data-translate="contact">Contact</a></li>
-                <li>
-                    <div class="cart-icon" id="cartIcon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </div>
-                </li>
                 <li class="language-selector">
-                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Select Language">
-                        <option value="en">🇺🇸 English</option>
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Sélectionner la langue">
                         <option value="fr" selected>🇫🇷 Français</option>
+                        <option value="en">🇺🇸 English</option>
                         <option value="ar">🇸🇦 العربية</option>
                         <option value="sp">🇪🇸 Español</option>
                     </select>
@@ -1089,4 +1090,54 @@
         });
     </script>
 </body>
+    <link rel="stylesheet" href="../css/bottom-nav.css">
+    <!-- Bottom Navigation Bar (Mobile) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <a href="../index.html" class="bottom-nav__item" id="nav-home">
+            <span class="nav-icon"><i class="fas fa-home"></i></span>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="bottom-nav__item" id="nav-products">
+            <span class="nav-icon"><i class="fas fa-box"></i></span>
+            <span>Products</span>
+        </a>
+        <a href="categories.html" class="bottom-nav__item" id="nav-categories">
+            <span class="nav-icon"><i class="fas fa-th-large"></i></span>
+            <span>Categories</span>
+        </a>
+        <a href="about.html" class="bottom-nav__item" id="nav-about">
+            <span class="nav-icon"><i class="fas fa-info-circle"></i></span>
+            <span>About</span>
+        </a>
+        <a href="checkout.html" class="bottom-nav__item" id="nav-checkout">
+            <span class="nav-icon"><i class="fas fa-credit-card"></i></span>
+            <span>Checkout</span>
+        </a>
+        <a href="contact.html" class="bottom-nav__item" id="nav-contact">
+            <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+            <span>Contact</span>
+        </a>
+    </nav>
+    <!-- Bottom Nav Active Link Script -->
+    <script>
+        (function() {
+            const navMap = {
+                'index.html': 'nav-home',
+                'products.html': 'nav-products',
+                'categories.html': 'nav-categories',
+                'about.html': 'nav-about',
+                'checkout.html': 'nav-checkout',
+                'contact.html': 'nav-contact'
+            };
+            const path = window.location.pathname.split('/').pop();
+            let activeId = navMap[path];
+            if (!activeId && path) {
+                const page = path.replace('.html', '');
+                activeId = navMap[page + '.html'];
+            }
+            if (activeId) {
+                document.getElementById(activeId)?.classList.add('active');
+            }
+        })();
+    </script>
 </html> 

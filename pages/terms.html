@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conditions d'utilisation - Agarmay fer</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../js/darkmode.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,13 +18,20 @@
             <div class="logo">
                 <h1><span class="logo-text">Agarmay </span><span class="logo-highlight">fer</span></h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" data-translate="home">Accueil</a></li>
+                <li><a href="products.html" data-translate="products">Produits</a></li>
+                <li><a href="categories.html" data-translate="categories">Catégories</a></li>
+                <li><a href="about.html" data-translate="about">À propos</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Sélectionner la langue">
+                        <option value="fr" selected>🇫🇷 Français</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="sp">🇪🇸 Español</option>
+                    </select>
+                </li>
             </ul>
         </nav>
         <button id="darkModeToggle" aria-label="Toggle dark mode" style="margin-left:1rem; background:none; border:none; cursor:pointer; font-size:1.3rem; color:var(--secondary-color);">
@@ -78,5 +89,56 @@
             <p>&copy; 2025 Agarmay fer. <span data-translate="rights">Tous droits réservés.</span></p>
         </div>
     </footer>
+
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="bottom-nav" id="bottomNav">
+    <a href="../index.html" class="bottom-nav__item" id="nav-home">
+        <span class="nav-icon"><i class="fas fa-home"></i></span>
+        <span>Home</span>
+    </a>
+    <a href="products.html" class="bottom-nav__item" id="nav-products">
+        <span class="nav-icon"><i class="fas fa-box"></i></span>
+        <span>Products</span>
+    </a>
+    <a href="categories.html" class="bottom-nav__item" id="nav-categories">
+        <span class="nav-icon"><i class="fas fa-th-large"></i></span>
+        <span>Categories</span>
+    </a>
+    <a href="about.html" class="bottom-nav__item" id="nav-about">
+        <span class="nav-icon"><i class="fas fa-info-circle"></i></span>
+        <span>About</span>
+    </a>
+    <a href="checkout.html" class="bottom-nav__item" id="nav-checkout">
+        <span class="nav-icon"><i class="fas fa-credit-card"></i></span>
+        <span>Checkout</span>
+    </a>
+    <a href="contact.html" class="bottom-nav__item" id="nav-contact">
+        <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+        <span>Contact</span>
+    </a>
+</nav>
 </body>
+    <link rel="stylesheet" href="../css/bottom-nav.css">
+    <!-- Bottom Nav Active Link Script -->
+    <script>
+        (function() {
+            const navMap = {
+                'index.html': 'nav-home',
+                'products.html': 'nav-products',
+                'categories.html': 'nav-categories',
+                'about.html': 'nav-about',
+                'checkout.html': 'nav-checkout',
+                'contact.html': 'nav-contact'
+            };
+            const path = window.location.pathname.split('/').pop();
+            let activeId = navMap[path];
+            if (!activeId && path) {
+                const page = path.replace('.html', '');
+                activeId = navMap[page + '.html'];
+            }
+            if (activeId) {
+                document.getElementById(activeId)?.classList.add('active');
+            }
+        })();
+    </script>
 </html>
