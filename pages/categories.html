@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+<<<<<<< HEAD
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Catégories - Agarmay fer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/darkmode.js" defer></script>
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/cart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><span class="logo-text">Agarmay </span><span class="logo-highlight">fer</span></h1>
+            </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" data-translate="home">Home</a></li>
+                <li><a href="products.html" data-translate="products">Products</a></li>
+                <li><a href="categories.html" data-translate="categories">Categories</a></li>
+                <li><a href="about.html" data-translate="about">About</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li>
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </li>                
+                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Select Language">
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Catégories - Agarmyfer</title>    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/darkmode.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">            <div class="logo">
+                <h1><span class="logo-text">Agarmy</span><span class="logo-highlight">fer</span></h1>
+            </div><ul class="nav-links">
+                <li><a href="../index.html" data-translate="home">Accueil</a></li>
+                <li><a href="products.html" data-translate="products">Produits</a></li>
+                <li><a href="categories.html" data-translate="categories">Catégories</a></li>
+                <li><a href="about.html" data-translate="about">À propos</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span data-translate="cart">Panier</span></a></li>
+                <li class="login-dropdown">
+                    <a href="login.html"><i class="fas fa-user"></i> <span data-translate="login">Connexion</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Connexion</a></li>
+                        <li><a href="register.html">S'inscrire</a></li>
+                    </ul>
+                <!-- </li>                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Sélectionner la langue">
+                        <option value="fr" selected>🇫🇷 Français</option>
+>>>>>>> b3f45e2af55a8d6e0ae436ec285b0be33f400cdc
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="sp">🇪🇸 Español</option>
+                    </select>
+                </li> -->
+            </ul>
+        </nav>
+        <button id="darkModeToggle" aria-label="Toggle dark mode" style="margin-left:1rem; background:none; border:none; cursor:pointer; font-size:1.3rem; color:var(--secondary-color);">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>    <main>        <section class="categories-header">
+            <h1 data-translate="steelIronProducts">Produits en Acier & Fer</h1>
+            <p data-translate="browseRange">Parcourez notre gamme complète de produits en acier et fer de haute qualité</p>
+        </section>
+
+        <section class="categories-grid-section">            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="../images/categories/Acier de Structure.jpeg" alt="Structural Steel">                    <div class="category-content">
+                        <h3 data-translate="structuralSteel">Acier de Structure</h3>
+                        <p data-translate="structuralDesc">Acier de structure de haute qualité pour la construction</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=beams" data-translate="beams">Poutres en I & en H</a></li>
+                            <li><a href="products.html?category=channels" data-translate="channels">Profilés & Cornières</a></li>
+                            <li><a href="products.html?category=plates" data-translate="steelPlates">Tôles d'acier</a></li>
+                        </ul>
+                        <a href="products.html?category=structural" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <img src="../images/categories/Acier de Renforcement.avif" alt="Reinforcement Steel">                    <div class="category-content">
+                        <h3 data-translate="reinforcementSteel">Acier de Renforcement</h3>
+                        <p data-translate="reinforcementDesc">Barres et treillis en acier pour le renforcement du béton</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=rebars" data-translate="rebars">Barres</a></li>
+                            <li><a href="products.html?category=mesh" data-translate="wireMesh">Treillis</a></li>
+                            <li><a href="products.html?category=ties" data-translate="bindingWire">Fil de Liaison & Étriers</a></li>
+                        </ul>
+                        <a href="products.html?category=reinforcement" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <img src="../images/categories/Tuyaux & Tubes.jpeg" alt="Pipes & Tubes">                    <div class="category-content">
+                        <h3 data-translate="pipesTubes">Tuyaux & Tubes</h3>
+                        <p data-translate="pipesDesc">Tuyaux et tubes en acier pour diverses applications</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=seamless" data-translate="seamlessPipes">Tuyaux Sans Soudures</a></li>
+                            <li><a href="products.html?category=welded" data-translate="weldedPipes">Tuyaux Soudures</a></li>
+                            <li><a href="products.html?category=fittings" data-translate="pipeFittings">Raccords de Tuyauterie</a></li>
+                        </ul>
+                        <a href="products.html?category=pipes" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <img src="../images/categories/Tôles d'Acier.jpg" alt="Steel Sheets">                    <div class="category-content">
+                        <h3 data-translate="steelSheets">Tôles d'Acier</h3>
+                        <p data-translate="sheetsDesc">Divers types de tôles et bobines en acier</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=hot-rolled" data-translate="hotRolled">Tôles Laminées à Chaud</a></li>
+                            <li><a href="products.html?category=cold-rolled" data-translate="coldRolled">Tôles Laminées à Froid</a></li>
+                            <li><a href="products.html?category=galvanized" data-translate="galvanized">Tôles Galvanisées</a></li>
+                        </ul>
+                        <a href="products.html?category=sheets" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <img src="../images/categories/Quincaillerie en Acier.jpg" alt="Steel Hardware">                    <div class="category-content">
+                        <h3 data-translate="steelHardware">Quincaillerie en Acier</h3>
+                        <p data-translate="hardwareDesc">Quincaillerie et fixations pour la construction</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=bolts" data-translate="boltsNuts">Boulons & Écrous</a></li>
+                            <li><a href="products.html?category=fasteners" data-translate="fasteners">Fixations</a></li>
+                            <li><a href="products.html?category=tools" data-translate="tools">Outils & Accessoires</a></li>
+                        </ul>
+                        <a href="products.html?category=hardware" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <img src="../images/categories/Acier Spécial.jpg" alt="Specialty Steel">                    <div class="category-content">
+                        <h3 data-translate="specialtySteel">Acier Spécial</h3>
+                        <p data-translate="specialtyDesc">Acier de qualité spéciale pour des applications spécifiques</p>
+                        <ul class="subcategories">
+                            <li><a href="products.html?category=stainless" data-translate="stainlessSteel">Acier Inoxydable</a></li>
+                            <li><a href="products.html?category=tool-steel" data-translate="toolSteel">Acier Outil</a></li>
+                            <li><a href="products.html?category=alloy" data-translate="alloySteel">Acier Alliage</a></li>
+                        </ul>
+                        <a href="products.html?category=specialty" class="view-all" data-translate="viewAll">Voir tout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3 data-translate="aboutUs">About Us</h3>
+                <p data-translate="aboutUsText">Leading supplier of premium steel and iron products, committed to delivering quality materials and exceptional service to our valued customers worldwide.</p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label" data-translate="yearsExp">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label" data-translate="happyClients">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-translate="qualityAssured">Quality Assured</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label" data-translate="support">Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-translate="quickLinks">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span data-translate="home">Home</span></a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> <span data-translate="products">Products</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-translate="about">About</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-translate="contact">Contact</span></a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> <span data-translate="cart">Cart</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h3 data-translate="contactUs">Contactez-nous</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-translate="address">Agarmay fer Sarl Vente fer de métallurgie Tétouan, Maroc.</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p data-translate="phone">(555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p data-translate="email">agarmayfer@outlook.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p data-translate="hours">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-translate="newsletter">Newsletter</h3>
+                <p data-translate="newsletterText">Subscribe to our newsletter for updates, special offers, and industry insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" data-translate="emailPlaceholder">
+                    <button type="submit" data-translate="subscribe">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Agarmay fer. <span data-translate="rights">Tous droits réservés.</span></p>
+        </div>
+    </footer>    <script src="../js/main.js"></script>
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+            <div class="empty-cart" style="display: none;">
+                <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                <p>Your cart is empty</p>
+                <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" style="display: none;">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var user = localStorage.getItem('user');
+        document.querySelectorAll('a[href*="cart.html"]').forEach(function(cartLink) {
+          if (!user) cartLink.style.display = 'none';
+        });
+      });
+    </script>
+
+</body>
+</html>

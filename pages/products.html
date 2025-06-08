@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+<<<<<<< HEAD
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Produits - Agarmay fer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/darkmode.js" defer></script>
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/universal-cart.js" defer></script>
+    <script src="../js/products.js" defer></script>
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Produits - Agarmyfer</title>    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/darkmode.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+>>>>>>> b3f45e2af55a8d6e0ae436ec285b0be33f400cdc
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><span class="logo-text">Agarmay </span><span class="logo-highlight">fer</span></h1>
+            </div>
+<<<<<<< HEAD
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" data-translate="home">Home</a></li>
+                <li><a href="products.html" data-translate="products">Products</a></li>
+                <li><a href="categories.html" data-translate="categories">Categories</a></li>
+                <li><a href="about.html" data-translate="about">About</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Select Language">
+=======
+            <ul class="nav-links">
+                <li><a href="../index.html" data-translate="home">Accueil</a></li>
+                <li><a href="products.html" data-translate="products">Produits</a></li>
+                <li><a href="categories.html" data-translate="categories">Catégories</a></li>
+                <li><a href="about.html" data-translate="about">À propos</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span data-translate="cart">Panier</span></a></li>
+                <li class="login-dropdown">
+                    <a href="login.html"><i class="fas fa-user"></i> <span data-translate="login">Connexion</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Connexion</a></li>
+                        <li><a href="register.html">S'inscrire</a></li>
+                    </ul>
+                </li>                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Sélectionner la langue">
+                        <option value="fr" selected>🇫🇷 Français</option>
+>>>>>>> b3f45e2af55a8d6e0ae436ec285b0be33f400cdc
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="sp">🇪🇸 Español</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+        <button id="darkModeToggle" aria-label="Toggle dark mode" style="margin-left:1rem; background:none; border:none; cursor:pointer; font-size:1.3rem; color:var(--secondary-color);">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>        <section class="products-section">
+            <div class="filters">
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search products..." data-translate="searchPlaceholder">
+                </div>
+                
+                <div class="filter-group">
+                    <h4 data-translate="categories">Categories</h4>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="structural">Structural Steel</option>
+                        <option value="reinforcement">Reinforcement Steel</option>
+                        <option value="pipes">Pipes & Tubes</option>
+                        <option value="sheets">Steel Sheets</option>
+                        <option value="hardware">Steel Hardware</option>
+                        <option value="specialty">Specialty Steel</option>
+                    </select>
+                </div>
+
+
+
+                <div class="filter-group">
+                    <h4 data-translate="sortBy">Sort By</h4>
+                    <select id="sortFilter">
+                        <option value="default">Default</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded dynamically -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading products...</p>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage" class="pagination-btn">Previous</button>
+                <div id="pageNumbers" class="page-numbers"></div>
+                <button id="nextPage" class="pagination-btn">Next</button>
+            </div>
+        </section>
+    </main>    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3 data-translate="aboutUs">About Us</h3>
+                <p data-translate="aboutUsText">Leading supplier of premium steel and iron products, committed to delivering quality materials and exceptional service to our valued customers worldwide.</p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label" data-translate="yearsExp">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label" data-translate="happyClients">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-translate="qualityAssured">Quality Assured</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label" data-translate="support">Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-translate="quickLinks">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-chevron-right"></i> <span data-translate="home">Home</span></a></li>
+                    <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span data-translate="categories">Categories</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-translate="about">About</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-translate="contact">Contact</span></a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> <span data-translate="cart">Cart</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h3 data-translate="contactUs">Contactez-nous</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-translate="address">Agarmay fer Sarl Vente fer de métallurgie Tétouan, Maroc.</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p data-translate="phone">(555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p data-translate="email">agarmayfer@outlook.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p data-translate="hours">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-translate="newsletter">Newsletter</h3>
+                <p data-translate="newsletterText">Subscribe to our newsletter for updates, special offers, and industry insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" data-translate="emailPlaceholder">
+                    <button type="submit" data-translate="subscribe">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Agarmay fer. <span data-translate="rights">Tous droits réservés.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📦 Products page loaded with Universal Cart System');
+            
+            // Check if user is logged in for cart functionality
+            const user = localStorage.getItem('user');
+            if (!user) {
+                console.log('ℹ️ User not logged in - cart will prompt for login on checkout');
+            }
+        });
+    </script>
+
+</body>
+</html>
