@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="modern-auth-bg">
+  <div class="modern-auth-container">
+    <div class="modern-auth-card" style="padding:2em; box-shadow:0 2px 16px rgba(0,0,0,0.08); width:100%; max-width:400px;">
+      <h2 style="margin-bottom:1em;">Register</h2>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Full Name" required style="width:100%;margin-bottom:1em;padding:0.8em;">
+        <input type="email" id="registerEmail" placeholder="Email Address" required style="width:100%;margin-bottom:1em;padding:0.8em;">
+        <input type="password" id="registerPassword" placeholder="Password" required style="width:100%;margin-bottom:1em;padding:0.8em;">
+        <button type="submit" style="width:100%;padding:0.8em;background:#1e40af;color:#fff;border:none;border-radius:6px;font-size:1em;">Register</button>
+      </form>
+      <div id="registerError" style="color:#c00;margin-top:1em;display:none;"></div>
+      <p style="margin-top:1.5em;">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+  <script src="../js/register.js"></script>
+</body>
+</html>

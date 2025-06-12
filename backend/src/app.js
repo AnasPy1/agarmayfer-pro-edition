@@ -3,7 +3,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
+
 const productRoutes = require('./routes/productRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -22,8 +24,10 @@ app.use('/images', express.static(path.join(__dirname, '../../images')));
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, '../../')));
 
+
 // Routes
 app.use('/api/products', productRoutes);
+app.use('/api/auth', authRoutes);
 
 // Serve frontend for all non-API routes
 app.get('*', (req, res) => {
