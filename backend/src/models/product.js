@@ -10,6 +10,10 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    price: {
+        type: Number,
+        required: false
+    },
     description: {
         type: String,
         required: true
@@ -33,4 +37,4 @@ const productSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Product', productSchema, 'products_agarmayfer');

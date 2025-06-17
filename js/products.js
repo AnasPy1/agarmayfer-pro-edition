@@ -156,7 +156,7 @@ function getStockText(product) {
 async function fetchProducts() {
     try {
         // Try to fetch from API first
-        const apiUrl = 'http://localhost:5000/api';
+        const apiUrl = 'http://192.168.1.2:400/api';
         const response = await fetch(`${apiUrl}/products`);
         
         if (!response.ok) {
@@ -254,8 +254,6 @@ function filterProducts() {
     displayProducts();
     updatePagination();
 }
-
-
 
 function sortProducts(sortValue) {
     switch(sortValue) {

@@ -1,5 +1,5 @@
 // API endpoints
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'http://192.168.1.2:400/api';
 
 // Function to fetch products from the backend
 async function fetchProducts() {
